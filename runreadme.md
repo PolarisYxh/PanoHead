@@ -1,0 +1,1 @@
+docker run --gpus all --name panohead-server --shm-size 100G -d  -p 50086:50086 -w /app -v "$(pwd):/app" -it panohead-base    /bin/bash
