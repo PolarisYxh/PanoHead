@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args":["--outdir=pti_out1", "--target_img=dataset/mydata_img", "--network", "models/easy-khair-180-gpc0.8-trans10-025000.pkl", "--idx", "0"],
+            // "args": ["-i", "data.pkl", "-j", "dataset.json"],
+            // "cwd": "${workspaceFolder}/3DDFA_V2",
+            "justMyCode": true
+        }
+    ]
+}

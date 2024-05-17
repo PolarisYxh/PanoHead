@@ -25,6 +25,15 @@ Abstract: *Synthesis and reconstruction of 3D human head has gained increasing i
   - `conda env create -f environment.yml`
   - `conda activate panohead`
 
+```
+# in PanoHead
+git clone https://github.com/cleardusk/3DDFA_V2.git 
+wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 
+#move it into 3DDFA_V2
+bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
+sh ./build.sh
+```
+
 
 ## Getting started
 
@@ -39,7 +48,7 @@ Pre-trained networks are stored as `*.pkl` files that can be referenced using lo
 # Generate videos using pre-trained model
 
 python gen_videos.py --network models/easy-khair-180-gpc0.8-trans10-025000.pkl \
---seeds 0-3 --grid 2x2 --outdir=out --cfg Head --trunc 0.7
+--seeds 0-3 --grid 2x2 --output=out --cfg Head --trunc 0.7
 
 ```
 
@@ -51,6 +60,14 @@ python gen_samples.py --outdir=out --trunc=0.7 --shapes=true --seeds=0-3 \
 ```
 
 ## Applications
+```
+cd 3DDFA_V2
+# put images to test/original
+python dlib_kps.py #output landmarks in data.pkl
+python recrop_images.py -i data.pkl -j dataset.json #output cropped images and info in crop_samples/dataset.json
+cp crop_samples/* ../dataset/mydata_img
+```
+
 ```.bash
 # Generate full head reconstruction from a single RGB image.
 # Please refer to ./gen_pti_script.sh

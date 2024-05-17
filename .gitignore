@@ -162,9 +162,9 @@ cython_debug/
 # paper results
 *.mp4
 out/
-pti_out/
+pti_out*/
 interpolation_out/
-models/
+/models/
 
 # viz
 viz/

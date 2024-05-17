@@ -27,7 +27,7 @@ dependencies:
   - matplotlib=3.4.2
   - imageio=2.9.0
   - pip:
-    - torch==1.11.0+cu113
+    # - torch==1.11.0+cu113
     - imgui==1.3.0
     - glfw==2.2.0
     - pyopengl==3.1.5
