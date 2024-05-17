@@ -28,6 +28,7 @@ Abstract: *Synthesis and reconstruction of 3D human head has gained increasing i
 ```
 # in PanoHead
 git clone https://github.com/cleardusk/3DDFA_V2.git 
+cd 3DDFA_V2
 wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 
 #move it into 3DDFA_V2
 bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
